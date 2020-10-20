@@ -1,0 +1,8 @@
+<map id="include/Triangulation.hpp" name="include/Triangulation.hpp">
+<area shape="rect" id="node1" title="Triangulation class &#45; implementation." alt="" coords="279,5,445,31"/>
+<area shape="rect" id="node2" href="$Triangulation_8h.html" title="Triangulation class." alt="" coords="286,79,438,104"/>
+<area shape="rect" id="node3" href="$CDT_8h.html" title="Public API." alt="" coords="310,152,414,177"/>
+<area shape="rect" id="node4" href="$InitializeWithGrid_8h.html" title="Helper function to initialize triangulation with regular grid instead of super&#45;triangle." alt="" coords="5,225,177,251"/>
+<area shape="rect" id="node5" href="$VerifyTopology_8h.html" title="Helper function to verify if triangulation has no inconsistencies." alt="" coords="202,225,359,251"/>
+<area shape="rect" id="node6" href="$CDT_8hpp.html" title="Public API &#45; implementation." alt="" coords="384,225,503,251"/>
+</map>

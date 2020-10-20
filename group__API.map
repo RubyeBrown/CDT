@@ -1,0 +1,5 @@
+<map id="Public API" name="Public API">
+<area shape="rect" id="node1" title="Contains API for constrained and conforming Delaunay triangulations." alt="" coords="5,25,88,51"/>
+<area shape="rect" id="node2" href="$group__Triangulation.html" title="Class performing triangulations." alt="" coords="245,5,380,31"/>
+<area shape="rect" id="node3" href="$group__helpers.html" title="Helpers for working with CDT::Triangulation." alt="" coords="279,69,346,95"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="include/CDTUtils.h" name="include/CDTUtils.h">
+<area shape="rect" id="node1" title="Utilities and helpers." alt="" coords="187,5,321,31"/>
+<area shape="rect" id="node2" href="$InitializeWithGrid_8h.html" title="Helper function to initialize triangulation with regular grid instead of super&#45;triangle." alt="" coords="5,372,177,397"/>
+<area shape="rect" id="node3" href="$CDT_8h.html" title="Public API." alt="" coords="229,299,333,324"/>
+<area shape="rect" id="node6" href="$CDTUtils_8hpp.html" title="Utilities and helpers &#45; implementation." alt="" coords="181,79,327,104"/>
+<area shape="rect" id="node7" href="$KDTree_8h_source.html" title=" " alt="" coords="351,79,474,104"/>
+<area shape="rect" id="node8" href="$LocatorKDTree_8h.html" title="Adapter between for KDTree and CDT." alt="" coords="357,152,524,177"/>
+<area shape="rect" id="node9" href="$Triangulation_8h.html" title="Triangulation class." alt="" coords="365,225,517,251"/>
+<area shape="rect" id="node4" href="$VerifyTopology_8h.html" title="Helper function to verify if triangulation has no inconsistencies." alt="" coords="202,372,359,397"/>
+<area shape="rect" id="node5" href="$CDT_8hpp.html" title="Public API &#45; implementation." alt="" coords="384,372,503,397"/>
+<area shape="rect" id="node10" href="$Triangulation_8hpp.html" title="Triangulation class &#45; implementation." alt="" coords="357,299,524,324"/>
+</map>
