@@ -486,16 +486,15 @@ private:
 namespace detail
 {
 
-static mt19937 randGenerator(9001);
-
 template <class RandomIt>
 void random_shuffle(RandomIt first, RandomIt last)
 {
+    SplitMix64RandGen rg(9001);
     typename std::iterator_traits<RandomIt>::difference_type i, n;
     n = last - first;
     for(i = n - 1; i > 0; --i)
     {
-        std::swap(first[i], first[randGenerator() % (i + 1)]);
+        std::swap(first[i], first[rg() % (i + 1)]);
     }
 }
 
@@ -521,7 +520,6 @@ void Triangulation<T, TNearPointLocator>::insertVertices(
             "Triangulation was finalized with 'erase...' method. Inserting new "
             "vertices is not possible");
     }
-    detail::randGenerator.seed(9001); // ensure deterministic behavior
     if(vertices.empty())
     {
         addSuperTriangle(envelopBox<T>(first, last, getX, getY));

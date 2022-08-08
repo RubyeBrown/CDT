@@ -1219,6 +1219,7 @@ TriInd Triangulation<T, TNearPointLocator>::walkTriangles(
     const VertInd startVertex,
     const V2d<T>& pos) const
 {
+    SplitMix64RandGen rg(9001);
     // begin walk in search of triangle at pos
     TriInd currTri = vertTris[startVertex][0];
 #ifdef CDT_USE_BOOST
@@ -1232,7 +1233,7 @@ TriInd Triangulation<T, TNearPointLocator>::walkTriangles(
         const Triangle& t = triangles[currTri];
         found = true;
         // stochastic offset to randomize which edge we check first
-        const Index offset(detail::randGenerator() % 3);
+        const Index offset(rg() % 3);
         for(Index i_(0); i_ < Index(3); ++i_)
         {
             const Index i((i_ + offset) % 3);

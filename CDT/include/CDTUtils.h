@@ -54,7 +54,6 @@ typedef char couldnt_parse_cxx_standard[-1]; ///< Error: couldn't parse standard
 
 #include <array>
 #include <functional>
-#include <random>
 #include <tuple>
 #include <unordered_map>
 #include <unordered_set>
@@ -63,7 +62,6 @@ namespace CDT
 using std::array;
 using std::get;
 using std::make_tuple;
-using std::mt19937;
 using std::tie;
 using std::tuple;
 using std::unordered_map;
@@ -73,7 +71,6 @@ using std::unordered_set;
 #else
 #include <boost/array.hpp>
 #include <boost/functional/hash.hpp>
-#include <boost/random.hpp>
 #include <boost/tuple/tuple.hpp>
 #include <boost/unordered_map.hpp>
 #include <boost/unordered_set.hpp>
@@ -86,12 +83,28 @@ using boost::tie;
 using boost::tuple;
 using boost::unordered_map;
 using boost::unordered_set;
-using boost::random::mt19937;
 } // namespace CDT
 #endif
 
 namespace CDT
 {
+
+/// SplitMix64 pseudo-random number generator
+struct SplitMix64RandGen
+{
+    typedef unsigned long long uint64;
+    uint64 m_state;
+    explicit SplitMix64RandGen(uint64 state)
+        : m_state(state)
+    {}
+    uint64 operator()()
+    {
+        uint64_t z = (m_state += 0x9e3779b97f4a7c15);
+        z = (z ^ (z >> 30)) * 0xbf58476d1ce4e5b9;
+        z = (z ^ (z >> 27)) * 0x94d049bb133111eb;
+        return z ^ (z >> 31);
+    }
+};
 
 /// 2D vector
 template <typename T>
